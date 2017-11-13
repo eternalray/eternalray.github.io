@@ -1,37 +1,88 @@
-## Hello Gitpage
+# Naringu
 
-You can use the [editor on GitHub](https://github.com/eternalray/eternalray.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Naringu is dark jekyll theme that provide fully furnished jekyll setup, come with contact form, #6DD HTML color schema, and more features. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-### Markdown
+![Naringu](images/screenshot-1.png)
+![Naringu](images/screenshot-2.png)
+![Naringu](images/screenshot-3.png)
+![Naringu](images/screenshot-4.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Contents
 
-```markdown
-Syntax highlighted code block
+- [Usage](#usage)
+ - [Sidebar menu](#sidebar-menu)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+  - [Contact Form](#contact-form)
+  - [Comments](#comments)
+- [Development](#development)
+  - [Author](#author)
+  - [Contributors](#contributors)
+- [License](#license)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Usage
 
-1. Numbered
-2. List
+Just download and start the Jekyll server or fork this repo.
 
-**Bold** and _Italic_ and `Code` text
+### Sidebar menu
 
-[Link](url) and ![Image](src)
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+
+```
+---
+layout: page
+title: About
+---
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` 
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eternalray/eternalray.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Reverse layout
 
-### Support or Contact
+Reverse the page orientation with a single class.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```html
+<body class="layout-reverse">
+  ...
+</body>
+```
+### Contact Form
+
+Using formspree to enable contact form in static site.
+
+Go a head `contact/index.html` just change the email in the code
+
+```html
+<form action="http://formspree.io/youremail@yourdomain.com" role="form" method="POST">
+```
+
+### Comments
+
+Using [disqus](http://disqus.com/) to enable comments in static site.
+
+Just edit variable `disqus` in `_config.yml` to your disqus link.
+
+## Development
+
+Naringu come with two branches :.
+
+- `master` for active development. 
+- `gh-pages` for preview of Naringu
+
+### Author
+
+**Rizky Ariestiyansyah**
+- <https://github.com/ariestiyansyah>
+- <https://twitter.com/ariestiyansyah>
+
+### Contributors
+
+**Gildásio Júnior** - *a.k.a. @gjuniioor*
+- https://github.com/gjuniioor
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
